@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.container label {
+  font-size: 14px;
+}
