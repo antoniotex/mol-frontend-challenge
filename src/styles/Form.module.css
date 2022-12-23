@@ -1,7 +1,20 @@
 .main {
-  border: 1px solid red;
   margin: 0 auto;
   width: 100%;
   max-width: 600px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.submitButton {
+  border: none;
+  background: black;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  background: rgba(0, 0, 0, .5);
 }
