@@ -7,3 +7,7 @@
 .container label {
   font-size: 14px;
 }
+
+.container input {
+  text-transform: capitalize;
+}

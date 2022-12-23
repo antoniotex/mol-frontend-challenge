@@ -15,4 +15,55 @@
 
 .multipleInput input {
   width: 100%;
+  max-width: 400px;
+  margin-right: 5px;
 }
+
+.multipleInput button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+  border: 1px solid blue;
+  background-color: transparent;
+}
+
+.multipleInput button:disabled {
+  border: 1px solid gray;
+}
+
+.multipleInput button span {
+  color: blue;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.multipleInput button:disabled span {
+  color: gray;
+}
+
+.itemsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemsContainer .item {
+  width: min-content;
+  border: 1px solid blue;
+  margin-top: 10px;
+  font-size: 12px;
+  color: blue;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemsContainer .item span {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: -2px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+

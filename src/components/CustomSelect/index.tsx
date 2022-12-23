@@ -11,15 +11,20 @@ type Props = {
   name: string
   label: string
   options: OptionProps[]
-  handleChange: React.ChangeEventHandler<HTMLSelectElement>
 }
 
-const CustomSelect: React.FC<Props> = ({ name, label, options, handleChange }) => {
+const CustomSelect: React.FC<Props> = (props: any) => {
+  const {
+    field: { name, onBlur, onChange, value },
+    form: { errors, touched, setFieldTouched },
+    ...inputProps
+  } = props
+
   return (
     <div className={styles.container}>
-      <label htmlFor={name}>{ label }</label>
-      <select onChange={handleChange}>
-        { options.map((o, i) => (
+      <label htmlFor={props.name}>{ props.label }</label>
+      <select onChange={(text: any) => onChange(name)(text)}>
+        { props.options.map((o: OptionProps, i: number) => (
           <option key={i} value={o.value}>{o.title}</option>
         )) }
       </select>
